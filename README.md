@@ -1,24 +1,5 @@
 # vue-route
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### vue로 간단한 라우팅
+>* vue, vue-router, BootstrapVue
+>* vue life cycle 이해하기
+>* 2020.11.27 ~
