@@ -1,18 +1,18 @@
 <template>
   <div>
-    <h1>Welcome to {{title2}}!</h1>
+    <h1>Welcome to {{title}}!</h1>
     <input type="text" v-model="input1" />
     <button type="button" @click="getData">Get</button>
     <button type="button" @click="setData">Set</button>
 
     <select class="form-control" v-model="region" @change="changeRegion">
-      <option :key="i" :value="d.v" v-for="(d,i) in options">{{d.t}}</option>
+      <option :key="i" :value="data.text" v-for="(data,i) in options">{{data.text}}</option>
     </select>
 
     <table class="table table-bordered" v-show="tableShow">
-      <tr :key="i" v-for="(d,i) in options">
-        <td>{{d.v}}</td>
-        <td>{{d.t}}</td>
+      <tr :key="i" v-for="(data,i) in options">
+        <td>{{data.value}}</td>
+        <td>{{data.text}}</td>
       </tr>
     </table>
   </div>
@@ -25,12 +25,12 @@ export default {
       title2: "Seoul",
       input1: "abcd",
       options: [
-        { v: "S", t: "Seoul" },
-        { v: "J", t: "Jeju" },
-        { v: "B", t: "Busan" },
+        { value: "S", text: "Seoul" },
+        { value: "J", text: "Jeju" },
+        { value: "B", text: "Busan" },
       ],
-      region: "B",
-      tableShow: false,
+      region: "Seoul",
+      tableShow: true,
     };
   },
   watch: {
@@ -47,7 +47,7 @@ export default {
       this.input1 = "12345";
     },
     changeRegion() {
-      alert(this.region);
+      console.log(this.region);
     },
   },
   beforeCreate() {
@@ -63,10 +63,10 @@ export default {
     console.log("mounted");
   },
   beforeUpdate() {
-    // console.log("beforeUpdate");
+    console.log("beforeUpdate");
   },
   updated() {
-    // console.log("updated");
+    console.log("updated");
   },
   beforeDestroy() {
     console.log("beforeDestroy");
