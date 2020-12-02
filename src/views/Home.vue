@@ -15,6 +15,8 @@
         <td>{{data.text}}</td>
       </tr>
     </table>
+    <a href="/about"> /about gogo </a>
+
   </div>
 </template>
 <script>
